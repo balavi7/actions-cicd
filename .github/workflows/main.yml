@@ -50,5 +50,5 @@ jobs:
             AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
             AWS_REGION=ap-south-1
           script: |
-            docker run -d -p 3000:3000 976566383149.dkr.ecr.ap-south-1.amazonaws.com/demo-app:${{ github.sha }}
+            docker run -d --name mynodeapp -p 3000:3000 976566383149.dkr.ecr.ap-south-1.amazonaws.com/demo-app:${{ github.sha }}
     
